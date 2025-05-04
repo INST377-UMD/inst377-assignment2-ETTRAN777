@@ -1,0 +1,312 @@
+body {
+    background-color: #fddfbd;
+}
+
+.navbar {
+    background-color: #cf402e;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar li {
+    display: inline;
+    margin: 0 15px; /* Add spacing between navbar elements */
+    
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.navbar a {
+    text-decoration: none;
+    font-size: 18px; /* Adjust font size as needed */
+}
+
+#mainButtonContainer {
+    justify-self: center;
+    margin: 25px;
+    gap: 30px;
+    display: flex;
+}
+
+/* CSS */
+.button-85,
+.button-85:after {
+  width: 150px;
+  height: 76px;
+  line-height: 78px;
+  font-size: 20px;
+  font-family: 'Bebas Neue', sans-serif;
+  background: linear-gradient(45deg, transparent 5%, #FF013C 5%);
+  border: 0;
+  color: #fff;
+  letter-spacing: 3px;
+  box-shadow: 6px 0px 0px #00E6F6;
+  outline: transparent;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-85:after {
+  --slice-0: inset(50% 50% 50% 50%);
+  --slice-1: inset(80% -6px 0 0);
+  --slice-2: inset(50% -6px 30% 0);
+  --slice-3: inset(10% -6px 85% 0);
+  --slice-4: inset(40% -6px 43% 0);
+  --slice-5: inset(80% -6px 5% 0);
+  
+  content: 'DIVE IN';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 3%, #00E6F6 3%, #00E6F6 5%, #FF013C 5%);
+  text-shadow: -3px -3px 0px #F8F005, 3px 3px 0px #00E6F6;
+  clip-path: var(--slice-0);
+}
+
+.button-85:hover:after {
+  animation: 1s glitch;
+  animation-timing-function: steps(2, end);
+}
+
+@keyframes glitch {
+  0% {
+    clip-path: var(--slice-1);
+    transform: translate(-20px, -10px);
+  }
+  10% {
+    clip-path: var(--slice-3);
+    transform: translate(10px, 10px);
+  }
+  20% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 10px);
+  }
+  30% {
+    clip-path: var(--slice-3);
+    transform: translate(0px, 5px);
+  }
+  40% {
+    clip-path: var(--slice-2);
+    transform: translate(-5px, 0px);
+  }
+  50% {
+    clip-path: var(--slice-3);
+    transform: translate(5px, 0px);
+  }
+  60% {
+    clip-path: var(--slice-4);
+    transform: translate(5px, 10px);
+  }
+  70% {
+    clip-path: var(--slice-2);
+    transform: translate(-10px, 10px);
+  }
+  80% {
+    clip-path: var(--slice-5);
+    transform: translate(20px, -10px);
+  }
+  90% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 0px);
+  }
+  100% {
+    clip-path: var(--slice-1);
+    transform: translate(0);
+  }
+}
+
+@media (min-width: 768px) {
+  .button-85,
+  .button-85:after {
+    width: 200px;
+    height: 86px;
+    line-height: 88px;
+  }
+}
+
+#mainButtonContainer a{
+    /* Add styles for the main button here */
+    text-decoration: none;
+    color: black;
+}
+
+#quote {
+    /* Add styles for the quote span here */
+    color: #808080;
+}
+
+#author {
+    /* Add styles for the author span here */
+    color: #808080;
+}
+
+#quoteContainer {
+    border: solid 2px black;
+    background-color: white;
+    padding: 5px;
+    justify-self: center;
+    min-width: 35vw;
+    width: fit-content;
+}
+
+#enhyphen{
+    color: #808080;
+}
+
+#quoteContainer blockquote {
+    text-align: center;
+    margin: 0; /* Remove default margin */
+    padding: 10px; /* Add padding for spacing */
+}
+
+#quoteContainer h2 {
+    padding-bottom: 10px;
+    justify-self: center;
+}
+
+.audioContainer {
+    margin: 15px;
+    justify-self: center;
+    background-color: #127d51;
+    color: white;
+    padding: 5px;
+    font-weight: normal; /* Ensure text inside is not bold by default */
+}
+
+.audioContainer h2 {
+    font-weight: bold; /* Keep the heading bold */
+}
+
+.audioContainer p, 
+.audioContainer ul, 
+.audioContainer li {
+    font-weight: normal; /* Ensure other text is not bold */
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+    gap: 30px;
+}
+.buttonContainer button{
+    width: 49%;
+    height: 5vh;
+    border: solid 1px black;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#stocksForm{
+  display: block;
+}
+
+#stocksList{
+  width: 100%;
+}
+
+#stockContainer{
+  display: block;
+  margin-top: 10px;
+}
+
+#stockContainer select{
+  display: block;
+  width: 20%;
+}
+
+input[type="submit"]{
+  margin-top: 5px;
+  border: solid 0px;
+  border-radius: 12px;
+  color: white;
+  background-color:#2c981f;
+}
+
+#tableContainer{
+  padding: 2px;
+  margin-top: 40vh;
+  background-color: white;
+  width: fit-content;
+  border: 1px solid black;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 2px;
+}
+
+th{
+  border: 1px solid black;
+  padding-right: 50px;
+  padding-left: 50px;
+}
+
+th, td {
+  border: 1px solid black;
+}
+
+.emojiHeader h1{
+  display: inline;
+}
+
+.emojiHeader {
+  display: flex;
+  align-items: center;
+}
+
+.emojiHeader img{
+  width: 35px;
+  height: 35px;
+  display: inline;
+}
+
+.dogBreedContainer{
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  justify-self: center;
+}
+
+.breedButton{
+  padding: auto;
+  height: 5vh;
+  width: fit-content;
+  border: solid 0px;
+  border-radius: 8px;
+  margin-left: 5px;
+  margin-right: 5px;
+  color: white;
+  background-color: #ff3a40;
+  font-weight: bold;
+}
+
+#nextSlide, #prevSlide {
+  display: inline-block; /* Make the border fit the text content */
+  height: auto; /* Adjust height to fit content */
+  width: auto; /* Adjust width to fit content */
+  font-size: 60px;
+  color: blue;
+  border: solid 0px;
+  background-color: transparent;
+  padding: 5px; /* Add padding for spacing around the text */
+}
+
+#dogDescription {
+    display: none; /* Hide the description by default */
+    background-color: white;
+    border: 4px solid black;
+}

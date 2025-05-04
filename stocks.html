@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stocks</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="stockScript.js"></script>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+</head>
+
+<body>
+    <h1>INST377 - Activities</h1>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="stocks.html">Stocks</a></li>
+            <li><a href="dogs.html">Dogs</a></li>
+        </ul>
+    </nav>
+    <div id="stockContainer">
+        <form id="stockForm" onsubmit="polygonLookup(event)" method="post">
+            <input required type="text" id="stockInput" placeholder="Enter stock ticker">
+            <select id="timeList">
+                <option value="30">30 Days</option>
+                <option value="60">60 Days</option>
+                <option value="90">90 Days</option>
+            </select>
+            <input type="submit" value="Lookup!">
+        </form>
+    </div>
+
+    <div id="chartDiv" style="background-color: white;display: none;">
+        <div style="justify-self: right;">
+            <button id="closeChart" onclick="closeChart()">Close Chart</button>
+        </div>
+        <canvas id="myChart"></canvas>
+    </div>
+
+    <div id="tableContainer">
+        <table>
+            <thead>
+                <tr>
+                    <th>TICKER</th>
+                    <th>COMMENT COUNT</th>
+                    <th>SENTIMENT</th>
+                </tr>
+            </thead>
+            <tbody id="stockTableBody">
+            </tbody>
+        </table>
+    </div>
+
+
+
+    <div class="audioContainer">
+        <h2>In this page there are options to Navigate using Audio!</h2>
+        <p>Ensure your mic is enabled to be able to use this feature</p>
+        <ul>
+            <li>Lookup a stock</li>
+            <ul>
+                <li>Say: <strong>Lookup &lt;Stock Ticker&gt;</strong></li>
+            </ul>
+            <li>Navigate to a Different Page</li>
+            <ul>
+                <li>Say: <strong>Navigate to &lt;page&gt;</strong></li>
+            </ul>
+            <li>Change Page Color</li>
+            <ul>
+                <li>Say: <strong>Change the color to &lt;color&gt;</strong></li>
+            </ul>
+            <li>Say: Hello Back to you!</li>
+            <ul>
+                <li>Say: <strong>Hello</strong></li>
+            </ul>
+        </ul>
+        <div class="buttonContainer">
+            <button id="start" onclick="listening(true)">Turn On Listening</button>
+            <button id="stop" onclick="listening(false)">Turn Off Listening</button>
+        </div>
+    </div>
+
+</html>
